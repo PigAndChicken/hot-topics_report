@@ -41,12 +41,4 @@ module WiKey
       end
     end
   end
-<<<<<<< HEAD
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
-=======
-end
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
