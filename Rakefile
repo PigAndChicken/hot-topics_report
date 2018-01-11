@@ -5,10 +5,10 @@ task :console do
   sh 'pry -r ./init.rb'
 end
 
-USERNAME = 'soumyaray'
-IMAGE = 'codepraise-clone_notifier'
+USERNAME = 'hsueh821203'
+IMAGE = 'hot-topics_notifier'
 VERSION = '0.1.0'
-WORKER_APP = 'ruby application/clone_notifier.rb'
+WORKER_APP = 'ruby application/hot_topics_notifier.rb'
 
 desc 'Build Docker image'
 task :worker do
