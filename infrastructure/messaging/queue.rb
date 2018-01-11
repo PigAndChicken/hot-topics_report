@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # frozen_string_literal: true
-
-=======
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
-=======
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
 require 'aws-sdk-sqs'
 
 module WiKey
@@ -13,15 +6,8 @@ module WiKey
     ## Queue wrapper for AWS SQS
     # Requires: AWS credentials loaded in ENV or through config file
     class Queue
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       GROUP_ID = 'wikey'
-=======
-      GROUP_ID = 'codepraise_api'
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
-=======
-      GROUP_ID = 'codepraise_api'
->>>>>>> a3f7e630128a93d65db5e4f9055afde37e5faa80
       IDLE_TIMEOUT = 5 # seconds
 
       def initialize(queue_url)
