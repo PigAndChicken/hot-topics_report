@@ -30,13 +30,13 @@ namespace :docker do
     puts "\nRUNNING WORKER WITH LOCAL CONTEXT"
     puts " Running in #{env} mode"
 
-    sh 'docker run -e WORKER_ENV -v $(pwd)/config:/worker/config --rm -it ' \
+    sh 'sudo docker run -e WORKER_ENV -v $(pwd)/config:/worker/config --rm -it ' \
        "#{USERNAME}/#{IMAGE}:#{VERSION}"
   end
 
   desc 'Remove exited containers'
   task :rm do
-    sh 'docker rm -v $(docker ps -a -q -f status=exited)'
+    sh 'sudo docker rm -v $(docker ps -a -q -f status=exited)'
   end
 
   desc 'List all containers, running and exited'
@@ -47,7 +47,7 @@ namespace :docker do
   desc 'Push Docker image to Docker Hub'
   task :push do
     puts "\nPUSHING IMAGE TO DOCKER HUB"
-    sh "docker push #{USERNAME}/#{IMAGE}:#{VERSION}"
+    sh "sudo docker push #{USERNAME}/#{IMAGE}:#{VERSION}"
   end
 end
 
@@ -56,12 +56,12 @@ namespace :heroku do
   desc 'Build and Push Docker image to Heroku Container Registry'
   task :push do
     puts "\nBUILDING + PUSHING IMAGE TO HEROKU"
-    sh 'heroku container:push web'
+    sh 'sudo heroku container:push web'
   end
 
   desc 'Run worker on Heroku'
   task :run do
     puts "\nRUNNING CONTAINER ON HEROKU"
-    sh 'heroku run rake worker'
+    sh 'sudo heroku run rake worker'
   end
 end
