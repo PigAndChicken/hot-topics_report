@@ -44,11 +44,11 @@ namespace :docker do
     sh 'docker ps -a'
   end
 
-  # desc 'Push Docker image to Docker Hub'
-  # task :push do
-  #   puts "\nPUSHING IMAGE TO DOCKER HUB"
-  #   sh "docker push #{USERNAME}/#{IMAGE}:#{VERSION}"
-  # end
+  desc 'Push Docker image to Docker Hub'
+  task :push do
+    puts "\nPUSHING IMAGE TO DOCKER HUB"
+    sh "docker push #{USERNAME}/#{IMAGE}:#{VERSION}"
+  end
 end
 
 # Heroku container registry tasks
