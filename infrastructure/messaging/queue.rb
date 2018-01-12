@@ -7,7 +7,7 @@ module WiKey
     # Requires: AWS credentials loaded in ENV or through config file
     class Queue
 
-      GROUP_ID = 'wikey'
+      GROUP_ID = 'Wikey_api'
       IDLE_TIMEOUT = 5 # seconds
 
       def initialize(queue_url)
